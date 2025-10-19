@@ -6,7 +6,7 @@
 /*   By: brogalsk <brogalsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:33:19 by brogalsk          #+#    #+#             */
-/*   Updated: 2025/10/18 17:32:17 by brogalsk         ###   ########.fr       */
+/*   Updated: 2025/10/19 13:33:06 by brogalsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ class PhoneBook
 		int index;
 	
 	public:
-		void AddContact(int *index, PhoneBook MyBook);
-		void SearchContact(int index, PhoneBook Mybook);
+		void AddContact(int &index, PhoneBook &MyBook);
+		void SearchContact(int index, PhoneBook &Mybook);
+		void PrintContact(PhoneBook Mybook);
 };
 
 #endif

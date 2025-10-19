@@ -6,7 +6,7 @@
 /*   By: brogalsk <brogalsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 10:26:47 by brogalsk          #+#    #+#             */
-/*   Updated: 2025/10/18 17:33:23 by brogalsk         ###   ########.fr       */
+/*   Updated: 2025/10/19 12:39:41 by brogalsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main ()
 		std::cin >> x;
 		if (x == "ADD")
 		{
-			MyBook.AddContact(&contactcount, MyBook);
+			MyBook.AddContact(contactcount, MyBook);
 		}	
 		if (x == "SEARCH")
 		{

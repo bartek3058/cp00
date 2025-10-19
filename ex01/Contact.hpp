@@ -6,7 +6,7 @@
 /*   By: brogalsk <brogalsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:01:07 by brogalsk          #+#    #+#             */
-/*   Updated: 2025/10/18 17:44:54 by brogalsk         ###   ########.fr       */
+/*   Updated: 2025/10/19 13:33:11 by brogalsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,11 @@ class Contact
 		std::string DarkestSecret;
 	
 	public:
-		void SetFirstName(std::string b);
+		void SetFirstName(std::string &b);
 		void SetLastName(std::string b);
 		void SetNickName(std::string b);
 		void SetPhoneNumber(std::string b);
 		void SetDarkestSecret(std::string b);
-		void PrintContact(Contact contact);
 };
 
 #endif
