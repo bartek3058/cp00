@@ -14,6 +14,7 @@
 #define PHONEBOOK_HPP
 
 #include <iostream>
+#include <iomanip>
 #include "Contact.hpp"
 
 class PhoneBook
@@ -25,7 +26,7 @@ class PhoneBook
 	public:
 		void AddContact(int &index, PhoneBook &MyBook);
 		void SearchContact(int index, PhoneBook &Mybook);
-		void PrintContact(PhoneBook Mybook);
+		void FirstPrint(PhoneBook &Mybook);
 };
 
 #endif

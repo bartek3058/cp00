@@ -13,49 +13,70 @@
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 
-void Contact::PrintContact(PhoneBook Mybook)
+void PhoneBook::FirstPrint(PhoneBook &Mybook)
 {
 	std::cout<<"|     Index|First Name| Last Name|  Nickname|"<<std::endl;
-	if(Contact[0])
-	{
-		std::cout<<"|         1|"
-		if(contact[0].FirstName > 10)
-			std::cout<<""
-	}
+	int index;
+	index = 0;
+	Mybook.Contacts[index].PrintContact(Mybook.Contacts[index], index);
+	index = 1;
+	Mybook.Contacts[index].PrintContact(Mybook.Contacts[index], index);
+	index = 2;
+	Mybook.Contacts[index].PrintContact(Mybook.Contacts[index], index);
+	index = 3;
+	Mybook.Contacts[index].PrintContact(Mybook.Contacts[index], index);
+	index = 4;
+	Mybook.Contacts[index].PrintContact(Mybook.Contacts[index], index);
+	index = 5;
+	Mybook.Contacts[index].PrintContact(Mybook.Contacts[index], index);
+	index = 6;
+	Mybook.Contacts[index].PrintContact(Mybook.Contacts[index], index);
+	index = 7;
+	Mybook.Contacts[index].PrintContact(Mybook.Contacts[index], index);
+
 }
 
 void PhoneBook::SearchContact(int index, PhoneBook &Mybook)
 {
-	index--;
-	Mybook.Contacts[index].PrintContact(Mybook);
-	if (index > 7 || index < 0)
-		std::cout<<"Incorrect number"<<std::endl;
+	Mybook.Contacts[index].PrintContactDetails(Mybook.Contacts[index]);
 }
 
 void PhoneBook::AddContact(int &index, PhoneBook &MyBook)
 {
 	
 	std::string input;
-	
-	std::cout<<"FirstName: ";
-	std::cin>>input;
-	Contacts[index].SetFirstName(input);
-	std::cout<<"LastName: ";
-	std::cin>>input;
-	MyBook.Contacts[index].SetLastName(input);
-	std::cout<<"NickName: ";
-	std::cin>>input;
-	MyBook.Contacts[index].SetNickName(input);
-	std::cout<<"PhoneNumber: ";
-	std::cin>>input;
-	MyBook.Contacts[index].SetPhoneNumber(input);
-	std::cout<<"DarknestSecret: ";
-	std::cin>>input;
-	MyBook.Contacts[index].SetDarkestSecret(input);
-	if (index < 7)
+	while(input.empty())
 	{
-		index++;
+		std::cout<<"FirstName: ";
+		std::cin>>input;
 	}
-	if (index == 8)
-		index = 0;
+	Contacts[index].SetFirstName(input);
+	input = "";
+	while(input.empty())
+	{
+		std::cout<<"LastName: ";
+		std::cin>>input;
+	}
+	MyBook.Contacts[index].SetLastName(input);
+	input = "";
+	while(input.empty())
+	{
+		std::cout<<"NickName: ";
+		std::cin>>input;
+	}
+	MyBook.Contacts[index].SetNickName(input);
+	input = "";
+	while(input.empty())
+	{
+		std::cout<<"PhoneNumber: ";
+		std::cin>>input;
+	}
+	MyBook.Contacts[index].SetPhoneNumber(input);
+	input = "";
+	while(input.empty())
+	{
+		std::cout<<"DarknestSecret: ";
+		std::cin>>input;
+	}
+	MyBook.Contacts[index].SetDarkestSecret(input);
 }

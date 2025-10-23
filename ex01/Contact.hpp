@@ -30,6 +30,8 @@ class Contact
 		void SetNickName(std::string b);
 		void SetPhoneNumber(std::string b);
 		void SetDarkestSecret(std::string b);
+		void PrintContact(Contact Contact, int index);
+		void PrintContactDetails(Contact Contact);
 };
 
 #endif

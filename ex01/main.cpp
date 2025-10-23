@@ -16,13 +16,13 @@
 int main ()
 {
 	std::string x;
-	int a;
+	int index;
 	int contactcount;
 	PhoneBook MyBook;
 	Contact person;
 	
 	contactcount = 0;
-	a = 0;
+	index = 0;
 	std::cout<<"Welcome in the PhoneBook"<<std::endl;
 	while(1)
 	{
@@ -30,13 +30,28 @@ int main ()
 		std::cin >> x;
 		if (x == "ADD")
 		{
+			if (contactcount == 8)
+				contactcount = 0;
 			MyBook.AddContact(contactcount, MyBook);
+			contactcount++;
 		}	
 		if (x == "SEARCH")
 		{
-			std::cout<<"Choose number(1-8): ";
-			std::cin >> a;
-			MyBook.SearchContact(a, MyBook);
+			MyBook.FirstPrint(MyBook);
+			std::cout<<std::endl<<"Choose number(1-8): ";
+			if(!(std::cin >> index))
+			{
+				std::cin.clear();
+				std::cin.ignore(10000, '\n');
+				std::cout<<"Invalid input, please enter a number."<<std::endl;
+			}
+			else if (index >= 1 && index <= 8)
+			{
+				index--;
+				MyBook.SearchContact(index, MyBook);
+			}
+			else
+				std::cout<<"Incorrect number"<<std::endl;
 		}
 		if (x == "EXIT")
 		{
