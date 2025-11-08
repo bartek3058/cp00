@@ -6,15 +6,21 @@
 /*   By: brogalsk <brogalsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 10:26:47 by brogalsk          #+#    #+#             */
-/*   Updated: 2025/10/19 12:39:41 by brogalsk         ###   ########.fr       */
+/*   Updated: 2025/11/06 13:50:59 by brogalsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 
+void handle_sigint(int signal)
+{
+	std::exit(0);
+}
+
 int main ()
 {
+	std::signal(SIGINT, handle_sigint);
 	std::string x;
 	int index;
 	int contactcount;

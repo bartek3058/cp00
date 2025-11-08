@@ -6,7 +6,7 @@
 /*   By: brogalsk <brogalsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 10:52:32 by brogalsk          #+#    #+#             */
-/*   Updated: 2025/10/19 13:33:31 by brogalsk         ###   ########.fr       */
+/*   Updated: 2025/11/06 13:35:16 by brogalsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void Contact::PrintContact(Contact Contact, int index)
 	{
 		if(Nickname.length() > 10)
 		{
-			std::cout<<Nickname.substr(0, 9)<<".|";
+			std::cout<<Nickname.substr(0, 9)<<".|"<<std::endl;
 		}
 		else
 		{
